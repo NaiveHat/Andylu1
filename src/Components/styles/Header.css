@@ -1,0 +1,120 @@
+
+
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 105px 2.4px ;
+  background: whitesmoke;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header .marca {
+  margin: 8px auto auto 15px;
+}
+
+header .logo {
+  display: flex;
+  float: left;
+  height: 50px;
+  width: 50px;
+  font-size: larger;
+  justify-content: space-around;
+}
+
+header .logo-imagen {
+  float: left;
+  margin-top: 0;
+  width: 52px;
+}
+
+header nav {  
+  float: right;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+header nav ul li{
+  list-style: none;
+  position: relative;
+}
+header nav ul li.sub-menu:before{
+  content: '\f0d7';
+  font-family: fontAwesome;
+  position: absolute;
+  line-height: 50px;
+  color: black;
+  right: 5px;
+}
+
+header nav ul li ul {
+  position: absolute;
+  left: 0;
+  background: #333;
+  display: none;
+}
+header nav ul li:hover ul {
+  display: block;
+}
+
+header nav ul li ul li {
+  display: block;
+  width: 200px;
+}
+
+header nav ul li a {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+header nav ul li a:hover {
+  color: #fff;
+  background: #eb71b8;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  color: black;
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 803px) {
+  header  {
+    padding: 0 20px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  header nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: #333;
+    top: 50px;
+    left: -100%;
+    transition: 0.5s;
+  }
+  header nav.active {
+    left: 0;
+  }
+  header nav ul {
+    display: block;
+    text-align: center;
+  }
+  header nav ul li a {
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+  }
+}
