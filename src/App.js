@@ -23,7 +23,6 @@ class App extends React.Component {
 
         <Switch>
 
-        {/* <Route exact path="/" component={Hero} /> */}
         <Route exact path="/" component={Card} />
         <Route exact path="/Articulo/:id" component={Articulo} />
 

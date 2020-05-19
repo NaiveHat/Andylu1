@@ -2,7 +2,6 @@
 import React, { Component } from 'react'
 
 import './styles/Card.css'
-import './styles/Hero.css'
 
 export default class Card extends Component {
 
@@ -41,49 +40,51 @@ export default class Card extends Component {
         id: '3'
       },
       {
-        Nombre: 'Medalla Acero-San Benito',
-        Imagen: './assets/IMG_20200330_204415.jpg',
-        Precio: '$ 225.90',
+        Nombre: 'Rosario pastilla blanco SB',
+        Imagen: './assets/images/IMG_20200327_150128.jpg',
+        Precio: '$ 285.90',
         Material: 'Acero inoxidable',
-        Descripcion: 'Medalla de San Benito con cadena, ambos de acero inoxidable',
+        Descripcion: 'Rosario tejido San Benito c/ pastilla de acero',
         id: '4'
       },
       {
-        Nombre: 'Medalla Acero-San Benito',
-        Imagen: './assets/IMG_20200330_204415.jpg',
-        Precio: '$ 225.90',
-        Material: 'Acero inoxidable',
-        Descripcion: 'Medalla de San Benito con cadena, ambos de acero inoxidable',
-        id: '4'
+        Nombre: 'Rosario (Hilo-Madera)',
+        Imagen: './assets/images/IMG_20200327_183848.jpg',
+        Precio: '$ 48.78',
+        Material: 'Madera roble tallado',
+        Descripcion: 'Rosario de madera tallada, tejido de hilo artesanal',
+        id: '5'
       },
       {
-        Nombre: 'Medalla Acero-San Benito',
-        Imagen: './assets/IMG_20200330_204415.jpg',
-        Precio: '$ 225.90',
-        Material: 'Acero inoxidable',
-        Descripcion: 'Medalla de San Benito con cadena, ambos de acero inoxidable',
-        id: '4'
+        Nombre: 'Pulsera pastilla SB',
+        Imagen: './assets/images/IMG_20200330_175124.jpg',
+        Precio: '$ 103.50',
+        Material: 'Pastilla acero, hilo',
+        Descripcion: 'Pulsera misterio, tejido con pastilla de acero',
+        id: '6'
       },
       {
-        Nombre: 'Medalla Acero-San Benito',
-        Imagen: './assets/IMG_20200330_204415.jpg',
-        Precio: '$ 225.90',
-        Material: 'Acero inoxidable',
-        Descripcion: 'Medalla de San Benito con cadena, ambos de acero inoxidable',
-        id: '4'
+        Nombre: 'Pulsera SB-Grande',
+        Imagen: './assets/IMG_20200402_230315.jpg',
+        Precio: '$ 115.00',
+        Material: 'Chapa de oro',
+        Descripcion: 'Pulsera de chapa de oro con medalla grande SB',
+        id: '7'
       },
 
     ]
   }
 
-
+  handleClick = (articuloId) => {
+    this.props.history.push (`/Articulo/${articuloId}`)
+  }
 
   render() {
     return (
       <>
       <div className="container showcase">
         <h1 className="title"> Empresa artesanal 100% mexicana  </h1>
-          <p className="subtitle"> Revisa nuestra gama de productos y servicios</p>
+          <h4 className="subtitle"> Revisa nuestra gama de productos y servicios</h4>
       </div>
 
     <section className="container">
@@ -91,8 +92,10 @@ export default class Card extends Component {
       
       {this.state.arreglo.map ((articulo) => {
         return (
-        <div >
-          <img  src={articulo.Imagen} alt="foto1" />
+        <div>
+          <img onClick={()=>{this.handleClick(articulo.id)}} 
+          src={articulo.Imagen} 
+          alt="foto1" />
           <h5> {articulo.Nombre} </h5>
           <h4> {articulo.Precio} </h4>
           <h6> {articulo.Material} </h6>
@@ -107,6 +110,10 @@ export default class Card extends Component {
     )
   }
 }
+
+
+
+
 
 
 
