@@ -83,12 +83,11 @@ function Articulo (props) {
     }
   })
   setitems(articuloSeleccionado.fotos)
-  }, []) 
+  }, [ ] ) 
 
 
     return (
       <div>
-      <Articulo />
         {items.map ((foto) => {
         return (
         <div >
