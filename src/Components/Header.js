@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
 import './styles/Header.css'
 
@@ -7,39 +8,40 @@ export default class Header extends Component {
     return (
       <header>
         <div className="logo ml-4">
-          <a href="index.html">
-          <img src="../assets/Logo1.GIF"  alt="Logo Andylu" className="logo-imagen" /> </a>
+          <Link to='/'>
+          <img src="../assets/Logo1.GIF"  alt="Logo Andylu" className="logo-imagen" /> </Link>
           <h3 className="marca">    ANDYLU </h3>
+          <Link/>
         </div>
 
         <nav >
           <ul>
-            <li><a href="index.html"> Home </a></li>
-            <li className="sub-menu"><a href="index.html"> Productos </a>
+            <li><Link to='/'> Home </Link></li>
+            <li className="sub-menu"><Link to="/"> Productos </Link>
               <ul>
-                <li><a href="/"> Acero </a></li>
-                <li><a href="/"> Joyeria </a></li>
-                <li><a href="/"> Pulseras </a></li>
-                <li><a href="/"> Rosarios </a></li>
+                <li><Link to="/"> Acero </Link></li>
+                <li><Link to="/"> Joyeria </Link></li>
+                <li><Link to="/"> Pulseras </Link></li>
+                <li><Link to="/"> Rosarios </Link></li>
               </ul>
             </li> 
-            <li className="sub-menu"><a href="index.html"> Servicios </a>
+            <li className="sub-menu"><Link to="/"> Servicios </Link>
               <ul>
-                <li><a href="/"> Envios </a></li>
-                <li><a href="/"> Sugerencias </a></li>
-                <li><a href="/"> Mayoreo </a></li>
-                <li><a href="/"> Servicio al cliente </a></li>
+                <li><Link to="/"> Envios </Link></li>
+                <li><Link to="/"> Sugerencias </Link></li>
+                <li><Link to="/"> Mayoreo </Link></li>
+                <li><Link to="/"> Servicio al cliente </Link></li>
                 </ul>
             </li>
-            <li><a href="index.html"> Portafolio </a></li>
-            <li className="sub-menu"><a href="index.html"> Quienes somos? </a>
+            <li><Link to="/"> Portafolio </Link></li>
+            <li className="sub-menu"><Link to="/"> Quienes somos? </Link>
               <ul>
-                <li><a href="/"> Historia </a></li>
-                <li><a href="/"> Equipo </a></li>
-                <li><a href="/"> Procesos </a></li>
+                <li><Link to="/"> Historia </Link></li>
+                <li><Link to="/"> Equipo </Link></li>
+                <li><Link to="/"> Procesos </Link></li>
               </ul>
             </li>
-            <li><a href="index.html"> Contactanos </a></li>
+            <li><Link to="/"> Contactanos </Link></li>
           </ul>
         </nav>
         <div className="menu-toggle"><i className="fa fa-bars" aria-hidden="true"></i></div>

@@ -90,16 +90,16 @@ export default class Card extends Component {
     <section className="container">
       <div className="new-cards">
       
-      {this.state.arreglo.map ((articulo) => {
+      {this.state.arreglo.map ((producto) => {
         return (
         <div>
-          <img onClick={()=>{this.handleClick(articulo.id)}} 
-          src={articulo.Imagen} 
+          <img onClick={()=>{this.handleClick(producto.id)}} 
+          src={producto.Imagen} 
           alt="foto1" />
-          <h5> {articulo.Nombre} </h5>
-          <h4> {articulo.Precio} </h4>
-          <h6> {articulo.Material} </h6>
-          <p> {articulo.Descripcion} </p>
+          <h5> {producto.Nombre} </h5>
+          <h4> {producto.Precio} </h4>
+          <h6> {producto.Material} </h6>
+          <p> {producto.Descripcion} </p>
         </div>
           )
         })

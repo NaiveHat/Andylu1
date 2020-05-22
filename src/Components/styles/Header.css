@@ -11,6 +11,9 @@ header {
 
 header .marca {
   margin: 8px auto auto 15px;
+  color: black;
+  text-decoration: none;
+  font-style: none;
 }
 
 header .logo {
