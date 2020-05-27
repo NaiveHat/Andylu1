@@ -1,13 +1,10 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
 
 import './App.css';
 
-
 import Header from './Components/Header.js'
-
 import Home from './Components/Home.js'
 import Articulo from './Components/Articulo'
 import 'bootstrap/dist/css/bootstrap.min.css';

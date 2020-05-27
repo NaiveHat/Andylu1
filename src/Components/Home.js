@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react'
 
-import './styles/Card.css'
+import './styles/Home.css'
 
-export default class Card extends Component {
+export default class Home extends Component {
 
   state = {
     arreglo: [
@@ -89,17 +89,17 @@ export default class Card extends Component {
 
     <section className="container">
       <div className="new-cards">
-      
       {this.state.arreglo.map ((producto) => {
         return (
-        <div>
-          <img onClick={()=>{this.handleClick(producto.id)}} 
+        <div className="tarjeta">
+          <img 
+          onClick={()=>{this.handleClick(producto.id)}} 
           src={producto.Imagen} 
-          alt="foto1" />
+          alt="foto1"
+          className="tarjeta_foto" />
           <h5> {producto.Nombre} </h5>
-          <h4> {producto.Precio} </h4>
+          <h4> <strong>{producto.Precio}</strong> </h4>
           <h6> {producto.Material} </h6>
-          <p> {producto.Descripcion} </p>
         </div>
           )
         })

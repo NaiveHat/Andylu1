@@ -12,7 +12,7 @@ export default class Header extends Component {
           <img src="../assets/Logo1.GIF"  alt="Logo Andylu" className="logo-imagen" /> </Link>
           <h3 className="marca">    ANDYLU </h3>
           <Link/>
-        </div>
+        </div> 
 
         <nav >
           <ul>
